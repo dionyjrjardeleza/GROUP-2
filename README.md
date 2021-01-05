@@ -1,4 +1,6 @@
 # GROUP-2
+Group Team Leader:
+Diony Jr. P. Jardeleza
 Group members:
 Casabol, Jeremy
 Catindig, Aira Mae
