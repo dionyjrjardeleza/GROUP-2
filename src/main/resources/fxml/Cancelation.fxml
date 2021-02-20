@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="1166.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oopclass.breadapp.controllers.CancelationController">
+   <left>
+      <VBox alignment="CENTER" prefHeight="568.0" prefWidth="277.0" style="-fx-background-color: cyan;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/MIGHTY%20TEA%203.png" />
+               </image>
+            </ImageView>
+            <Label alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="67.0" prefWidth="256.0" text="Cancel Reservation" textAlignment="CENTER" textOverrun="CLIP">
+               <font>
+                  <Font name="Gabriola" size="43.0" />
+               </font>
+            </Label>
+            <Label fx:id="cancelationId" />
+            <TextField fx:id="customerName" cache="true" maxWidth="-Infinity" prefHeight="30.0" prefWidth="246.0" promptText="Customer Name">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></TextField>
+            <HBox prefHeight="10.0" prefWidth="277.0" />
+            <TextField fx:id="description" maxWidth="-Infinity" prefHeight="30.0" prefWidth="246.0" promptText="CancelLation Descriptiom" />
+            <HBox prefHeight="10.0" prefWidth="277.0" />
+            <DatePicker fx:id="cancel" maxWidth="-Infinity" prefHeight="30.0" prefWidth="246.0" promptText="Date of CancelLation" showWeekNumbers="true" />
+            <HBox prefHeight="10.0" prefWidth="277.0" />
+            <DatePicker fx:id="dateApprove" maxWidth="-Infinity" prefHeight="30.0" prefWidth="246.0" promptText="Date of CancelLation Approve" showWeekNumbers="true" />
+            <HBox prefHeight="36.0" prefWidth="277.0" />
+            <HBox alignment="TOP_CENTER" prefHeight="41.0" prefWidth="277.0" spacing="15.0">
+               <children>
+                  <RadioButton fx:id="approve" mnemonicParsing="false" text="Approve" />
+                  <RadioButton fx:id="denied" mnemonicParsing="false" text="Denied" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" spacing="15.0">
+               <children>
+                  <Button fx:id="add" mnemonicParsing="false" onAction="#addAppointments" prefHeight="30.0" prefWidth="60.0" text="ADD" />
+                  <Button fx:id="delete" mnemonicParsing="false" onAction="#deleteAppointments" prefHeight="30.0" prefWidth="60.0" text="DELETE" />
+                  <Button fx:id="reset" mnemonicParsing="false" onAction="#reset" prefHeight="30.0" prefWidth="60.0" text="RESET" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="dataTable" prefHeight="558.0" prefWidth="898.0" style="-fx-background-color: cr;">
+              <columns>
+                <TableColumn fx:id="colID" prefWidth="51.0" text="ID" />
+                <TableColumn fx:id="colCustomer" prefWidth="150.0" text="Customer Name" />
+                  <TableColumn fx:id="colDescription" prefWidth="150.0" text="CancelLation Description " />
+                  <TableColumn fx:id="colCancel" prefWidth="150.0" text="Date of CancelLation " />
+                  <TableColumn fx:id="colApprove" prefWidth="182.0" text="Date of CancelLation Approve" />
+                  <TableColumn fx:id="colAnswer" prefWidth="92.0" text="Answer" />
+                  <TableColumn fx:id="colEdit" prefWidth="114.0" text="Edit" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
