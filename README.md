@@ -1,5 +1,5 @@
 # GROUP-2
-\nGroup Team Leader:
+Group Team Leader:
 Diony Jr. P. Jardeleza
 Group members:
 Casabol, Jeremy
