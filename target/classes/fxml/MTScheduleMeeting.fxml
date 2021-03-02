@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1230.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oopclass.breadapp.controllers.MTScheduleMeetingController">
+   <left>
+      <VBox alignment="CENTER" prefHeight="568.0" prefWidth="277.0" style="-fx-background-color: cyan;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/MIGHTY%20TEA.png" />
+               </image>
+            </ImageView>
+            <Label alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="54.0" prefWidth="493.0" text="Schedule Meeting for Franchise" textAlignment="CENTER" textOverrun="CLIP">
+               <font>
+                  <Font name="Gabriola" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="mtschedulemeetingId" />
+            <TextField fx:id="mtfullName" cache="true" maxWidth="-Infinity" prefHeight="30.0" prefWidth="246.0" promptText="Full Name">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></TextField>
+            <HBox prefHeight="10.0" prefWidth="277.0" />
+            <TextField fx:id="mtcontactNumber" maxWidth="-Infinity" prefHeight="30.0" prefWidth="246.0" promptText="Contact Number" />
+            <HBox prefHeight="10.0" prefWidth="277.0" />
+            <TextField fx:id="mtaddress" maxWidth="-Infinity" prefHeight="30.0" prefWidth="246.0" promptText="Address" />
+            <HBox prefHeight="10.0" prefWidth="277.0" />
+            <DatePicker fx:id="mtdoa" maxWidth="-Infinity" prefHeight="30.0" prefWidth="246.0" promptText="Date of Meeting " showWeekNumbers="true" />
+            <HBox alignment="CENTER" prefHeight="72.0" prefWidth="277.0" spacing="15.0">
+               <children>
+                  <RadioButton fx:id="approve" mnemonicParsing="false" text="Approve" />
+                  <RadioButton fx:id="denied" mnemonicParsing="false" text="Denied" />
+               </children></HBox>
+            <HBox alignment="CENTER" spacing="15.0">
+               <children>
+                  <Button fx:id="add" mnemonicParsing="false" onAction="#addAppointments" prefHeight="30.0" prefWidth="60.0" text="ADD" />
+                  <Button fx:id="reset" mnemonicParsing="false" onAction="#reset" prefHeight="30.0" prefWidth="60.0" text="RESET" />
+                  <Button fx:id="delete" mnemonicParsing="false" onAction="#deleteAppointments" prefHeight="30.0" prefWidth="60.0" text="DELETE" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="24.0" prefWidth="277.0" />
+            <HBox prefHeight="32.0" prefWidth="277.0">
+               <children>
+                  <Button fx:id="openPartea" mnemonicParsing="false" onAction="#openPartea" prefHeight="30.0" prefWidth="120.0" text="PARTEA">
+                     <HBox.margin>
+                        <Insets left="75.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="mtDataTable" prefHeight="556.0" prefWidth="672.0" style="-fx-background-color: cr;">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="51.0" text="ID" />
+                <TableColumn fx:id="colFullName" prefWidth="150.0" text="Full Name" />
+                  <TableColumn fx:id="colContactNumber" prefWidth="150.0" text="Contact Number" />
+                  <TableColumn fx:id="colAddress" prefWidth="150.0" text="Address" />
+                  <TableColumn fx:id="colDOA" prefWidth="150.0" text="Date of Meeting" />
+                  <TableColumn fx:id="colAnswer" prefWidth="150.0" text="Answer" />
+                  <TableColumn fx:id="colEdit" prefWidth="150.0" text="Edit" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
